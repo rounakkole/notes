@@ -1,0 +1,48 @@
+   01  git --version
+   02  git help config
+   03  git config --global user.email "emailId@gmail.com"
+   04  git config --global user.name "gitUserName"
+ 
+
+
+   11  mkdir test4
+   12  cd test4
+   13  git init
+   # create file and records
+   20  git status
+   22  git add *
+   23  git commit -m "commit-1"
+
+
+
+   # create remote repo on github
+   62 git clone https://github.com/gitUserName/test4.git
+   # git remote add origin https://github.com/gitUserName/test4.git
+   63 ls
+   64 cd test4
+   65 git pull
+   # create file and records
+   66 git status
+   67 git add *
+   68 git commit -m "commit-2"
+   69 git push
+     
+    
+
+   79 git pull
+   80 git branch ex1
+   81 git branch -a
+   82 git checkout ex1
+   # make changes
+   84 git add *
+   85 git commit -m "commit-3"
+   86 git push origin ex1
+
+
+
+   92 git checkout main
+   93 git merge ex1
+   94 git status
+   95 git commit -m "commit-4"
+   96 git push origin main
+   

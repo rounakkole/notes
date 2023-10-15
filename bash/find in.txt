@@ -1,0 +1,27 @@
+489  awk --help
+491  echo john is going to school | awk '{print $5}'
+495  echo john is going to school | awk '{$5="home"} {print $0}'
+496  $ echo john is going to school | awk '{print $5}'
+497  $ echo john is going to school | awk '{print $5}'
+
+
+
+503  touch data.csv
+504  nano data.csv
+505  cat data.csv
+506  cat data.csv | grep captain
+507  cat data.csv | grep captain | awk '{print $2}'
+509  cat data.csv | grep captain | awk '{print $2 "   " $5}'
+510  cat data.csv | grep captain | awk '{print sum=sum+$5} END {print sum}'
+511  cat data.csv | grep captain | awk '{sum=sum+$3} END {print sum/NR}'
+513  cat data.csv | grep captain | awk '{sum+=$5} END {print sum}'
+
+
+
+515  awk "{print NF}" < data.csv | uniq
+518  awk '/mike/' data.csv
+519  awk '/david/' data.csv
+520  awk '{if ($5==5432543) {print}}' data.csv |head
+521  awk -F "\t" '{if ($5==5432543) && ($3>100) &&($3<900)} {print}}' data.csv
+530  grep -c captain data.csv
+531  history

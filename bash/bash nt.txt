@@ -1,0 +1,165 @@
+
+File Management
+List of files in current directory
+> Ls
+> ls.      to fetch single file
+> ls..     to fetch all files
+> ls~      to get home directory files and folders
+> ls -a    to get hidden files
+> ls -l       to shows the content directory
+
+
+
+Creating files under folders
+touch (file name).extension
+> touch text1.txt
+
+Copy file from one location to other
+cp   (file name) space (destination url or folder name)
+> cp text.txt folderName/	
+
+Move file
+mv (source fine name) (destination)
+> mv test.pdf linux-content/
+
+
+
+
+
+
+
+
+Folder management
+To create nested folder like folder under folder
+> mkdir folderName/folder1		creating folder1 folder under folderName
+
+
+   
+
+
+
+
+
+View or brows files
+Get file records
+head (full name)
+> head data.csv
+
+
+Find ir fetch records for top 5
+> head -5 data.csv
+
+Fetch records of top 10 
+> head -10 data.csv
+
+Fetch records of bottom 10
+> tail -10 data.csv
+
+Access all the records from file
+> cat data.csv
+
+
+
+
+
+
+
+
+
+Pipe and Grep cmd
+Pipe = use to combine two or more than two cmd
+Grep = use to match the pattern or getting perticular pattern or record
+
+Apply pipe
+> find . -size +5M | grep.pfd
+
+
+Fetch the file more than 5 mb
+> find  . size +5M
+> find *pff -size +5M
+
+Fetch pertucular file
+find . -name (file name)
+> find . -name  data*
+
+
+Get only file name
+> ls -p | grep /
+
+Get all folders or files name
+> ls -p | grep -v /
+
+
+
+
+
+
+
+
+
+
+
+Process management
+> fg %1 = 	starting the processes
+> ^z =	stop the process
+
+> bg %1 =		starting the process in backround 
+> jobs =		now you will see jobs is running 
+> ps -elf =		see all processes 
+
+> ps elf | grep java =					showing 2 process id (grep command also executed, remove grep process)
+> grep elf | grep java | grep -v grep = 		remove grep and get the java process id 
+# 10372 	second column is process id 
+> kill -9 10372
+
+
+
+480  ps -elf
+481  ps -elf |grep java | grep -v grep
+482  mypid=ps -elf |grep java | grep -v grep
+483  mypid=mypid=`ps -elf |grep java | grep -v grep | awk '{print $2}'`
+484  echo $mypid
+485  kill -9 $mypid
+488  kill --help
+
+
+
+
+
+
+
+
+Disk management
+576  du -ah
+577  du -am
+579  du
+580  du -ah | sort -nr
+581  du -ah | sort -n
+
+
+
+
+
+
+
+
+Environmental variables
+Used to save  important data of our system or use for path saving
+> env | grep USERNAME
+
+
+
+
+
+Find location of cmd
+where (cmd name)
+> where ls		it shows the path where ls cmd you used       
+> where ls /bin
+
+
+
+
+
+
+
+
