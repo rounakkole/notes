@@ -1,9 +1,5 @@
-560  nano -T 3 copyFile.sh
-561  ./copyFile.sh
+##!/bin/bash -x
 
-
-
-#!/bin/bash -x
 for file in `ls *txt`;
    do
    folder=`echo $file | awk -F. '{print $1}'`;
@@ -15,5 +11,6 @@ for file in `ls *txt`;
    mkdir $folder;
    cp $file $folder;
    echo $file copied into $folder;
-   done
+done
+
 # my firsh bash script

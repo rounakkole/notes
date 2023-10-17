@@ -1,7 +1,7 @@
 
-File Management
+#File Management
 List of files in current directory
-> Ls
+> ls
 > ls.      to fetch single file
 > ls..     to fetch all files
 > ls~      to get home directory files and folders
@@ -29,9 +29,9 @@ mv (source fine name) (destination)
 
 
 
-Folder management
+#Folder management
 To create nested folder like folder under folder
-> mkdir folderName/folder1		creating folder1 folder under folderName
+> mkdir folderName/folder1		creating folder1 directory under folderName
 
 
    
@@ -40,7 +40,7 @@ To create nested folder like folder under folder
 
 
 
-View or brows files
+#View or brows files
 Get file records
 head (full name)
 > head data.csv
@@ -66,7 +66,7 @@ Access all the records from file
 
 
 
-Pipe and Grep cmd
+#Pipe and Grep cmd
 Pipe = use to combine two or more than two cmd
 Grep = use to match the pattern or getting perticular pattern or record
 
@@ -83,10 +83,10 @@ find . -name (file name)
 > find . -name  data*
 
 
-Get only file name
+Get only folder name
 > ls -p | grep /
 
-Get all folders or files name
+Get all files name
 > ls -p | grep -v /
 
 
@@ -95,20 +95,16 @@ Get all folders or files name
 
 
 
+#Process management
+> fg %1   	starting the processes
+> ^z  	stop the process
 
+> bg %1 		starting the process in backround 
+> jobs 		now you will see jobs is running 
+> ps -elf 		see all processes 
 
-
-
-Process management
-> fg %1 = 	starting the processes
-> ^z =	stop the process
-
-> bg %1 =		starting the process in backround 
-> jobs =		now you will see jobs is running 
-> ps -elf =		see all processes 
-
-> ps elf | grep java =					showing 2 process id (grep command also executed, remove grep process)
-> grep elf | grep java | grep -v grep = 		remove grep and get the java process id 
+> ps elf | grep java 					showing 2 process id (grep command also executed, remove grep process)
+> grep elf | grep java | grep -v grep  		remove grep and get the java process id 
 # 10372 	second column is process id 
 > kill -9 10372
 
@@ -129,7 +125,7 @@ Process management
 
 
 
-Disk management
+#Disk management
 576  du -ah
 577  du -am
 579  du
@@ -139,24 +135,29 @@ Disk management
 
 
 
-
-
-
-
-Environmental variables
+#Environmental variables
 Used to save  important data of our system or use for path saving
 > env | grep USERNAME
 
 
 
 
-
-Find location of cmd
+#Find location of cmd file
 where (cmd name)
 > where ls		it shows the path where ls cmd you used       
 > where ls /bin
 
 
+
+#Bash scripting
+Create or open file with tab as 3 spaces
+> nano -T 3 fileName.sh
+
+Execute the file
+> ./fileName.sh
+
+Debug
+#!/bin/bash -x
 
 
 
