@@ -6,7 +6,7 @@ List of files in current directory
 > ls..     to fetch all files
 > ls~      to get home directory files and folders
 > ls -a    to get hidden files
-> ls -l       to shows the content directory
+> ls -l    to shows the content directory
 
 
 
@@ -15,12 +15,12 @@ touch (file name).extension
 > touch text1.txt
 
 Copy file from one location to other
-cp   (file name) space (destination url or folder name)
+cp (file name) (destination url or folder_name)
 > cp text.txt folderName/	
 
 Move file
 mv (source fine name) (destination)
-> mv test.pdf linux-content/
+> mv test.pdf new_folder2/
 
 
 
@@ -71,16 +71,16 @@ Pipe = use to combine two or more than two cmd
 Grep = use to match the pattern or getting perticular pattern or record
 
 Apply pipe
-> find . -size +5M | grep.pfd
+> find . -size +5M | grep .pdf
 
 
 Fetch the file more than 5 mb
-> find  . size +5M
-> find *pff -size +5M
+> find . size +5M
+> find *pdf -size +5M
 
 Fetch pertucular file
 find . -name (file name)
-> find . -name  data*
+> find . -name data*
 
 
 Get only folder name
@@ -126,11 +126,11 @@ Get all files name
 
 
 #Disk management
-576  du -ah
-577  du -am
+576  du -ah				disk usage in human readable
+577  du -am				disk usage in human readable
 579  du
-580  du -ah | sort -nr
-581  du -ah | sort -n
+580  du -ah | sort -nr		sort desc
+581  du -ah | sort -n		sort asc
 
 
 
@@ -144,7 +144,7 @@ Used to save  important data of our system or use for path saving
 
 #Find location of cmd file
 where (cmd name)
-> where ls		it shows the path where ls cmd you used       
+> where ls			it shows the path where ls cmd you used       
 > where ls /bin
 
 
@@ -153,7 +153,7 @@ where (cmd name)
 Create or open file with tab as 3 spaces
 > nano -T 3 fileName.sh
 
-Execute the file
+Execute sh file
 > ./fileName.sh
 
 Debug

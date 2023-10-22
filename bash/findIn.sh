@@ -10,7 +10,6 @@ for file in `ls -p | grep -v /`;
 	found=`cat $file | grep $ip`
    if [ -n "$found" ]
       then
-	   #echo $ip found into $file;
 	   echo $file : $found;
 	   echo;
    fi
